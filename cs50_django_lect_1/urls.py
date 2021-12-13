@@ -17,7 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    #path('', include("hello.urls")),  # это если начинать в сайте не с /hello , а сразу с адреса сайта будет работать маршруті приложения hello
+    path('', include("hello.urls")),  # это если начинать в сайте не с /hello , а сразу с адреса сайта будет работать маршруті приложения hello
     path('admin/', admin.site.urls),
-    path('hello/', include("hello.urls"))
+    path('hello/', include("hello.urls")),
+    path('newyear/', include("newyear.urls"))
 ]

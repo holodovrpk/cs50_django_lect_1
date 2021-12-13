@@ -11,5 +11,9 @@ def alex(request):
 def bob(request):
     return HttpResponse("Hello, Bob!")
 
+"""def privet(request, name):
+    return HttpResponse(f"Hello, {name.capitalize()}!")"""
 def privet(request, name):
-    return HttpResponse(f"Hello, {name.capitalize()}!")
+    return render(request, "hello/privet.html", {
+        "name":name.capitalize()
+    })
